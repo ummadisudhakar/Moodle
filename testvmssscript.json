@@ -35,7 +35,7 @@
         "baseTemplateUrl": "[parameters('baseTemplateUrl')]",
         "scriptLocation": "[parameters('scriptLocation')]",
         "artifactsSasToken": "[parameters('artifactsSasToken')]",
-        "location": "[parameters('location')]",
+        "location": "[resourceGroup().location]",
         "vmssName": "[parameters('vmssName')]",
         "commonFunctionsScriptUri": "[parameters('commonFunctionsScriptUri')]",
         "webServerSetupScriptFilename": "[parameters('webServerSetupScriptFilename')]",
