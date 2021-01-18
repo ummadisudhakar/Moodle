@@ -25,7 +25,7 @@
                     ]
                 },
                 "protectedSettings": {
-                    "commandToExecute": "[concat('sh ', parameters('moodleCommon').moodleInstallScriptFilename, ' ', parameters('moodleCommon').moodleOnAzureConfigsJsonPath)]"
+                    "commandToExecute": "[concat('bash ', parameters('moodleCommon').moodleInstallScriptFilename, ' ', parameters('moodleCommon').moodleOnAzureConfigsJsonPath)]"
                 },
                 "type": "CustomScript",
                 "typeHandlerVersion": "2.0"
