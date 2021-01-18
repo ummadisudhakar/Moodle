@@ -1,0 +1,63 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "baseTemplateUrl": {
+            "type": "string"
+        },
+        "scriptLocation": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "vmssName": {
+            "type": "string"
+        },
+
+        "commonFunctionsScriptUri": {
+            "type": "string"
+        },
+
+        "moodleInstallScriptFilename": {
+            "type": "string"
+        },
+        "moodleOnAzureConfigsJsonPath": {
+            "type": "string"
+        },
+        "artifactsSasToken": {
+            "type": "string"
+        }
+},
+
+"variables": {
+    "moodleCommon": {
+        "baseTemplateUrl": "[parameters('baseTemplateUrl')]",
+        "scriptLocation": "[parameters('scriptLocation')]",
+        "artifactsSasToken": "[parameters('artifactsSasToken')]",
+        "location": "[resourceGroup().location]",
+        "ctlrVmName": "[parameters('ctlrVmName')]",
+        "commonFunctionsScriptUri": "[parameters('commonFunctionsScriptUri')]",
+        "moodleInstallScriptFilename": "[parameters('moodleInstallScriptFilename')]",
+        "moodleOnAzureConfigsJsonPath": "[parameters('moodleOnAzureConfigsJsonPath')]"
+
+    }
+},   
+"resources": [{
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2017-05-10",
+            "name": "testinvokeinstallmoodlescript",
+            "properties": {
+                "mode": "Incremental",
+                "parameters": {
+                    "moodleCommon": {
+                        "value": "[variables('moodleCommon')]"
+                    }
+                },
+                "templateLink": {
+                    "uri": "[concat(variables('moodleCommon').baseTemplateUrl,'webcontroller-install-moodle.json',parameters('artifactsSasToken'))]"
+                }
+            }
+        } 
+    ]
+}
