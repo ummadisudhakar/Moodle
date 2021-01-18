@@ -33,6 +33,6 @@
         }
     ],
     "variables": {
-        "scriptUri": "[concat(parameters('moodleCommon').scriptLocation,parameters('moodleCommon').webServerSetupScriptFilename,parameters('moodleCommon').artifactsSasToken)]"
+        "scriptUri": "[concat(parameters('moodleCommon').scriptLocation,parameters('moodleCommon').moodleInstallScriptFilename,parameters('moodleCommon').artifactsSasToken)]"
     }
 }
