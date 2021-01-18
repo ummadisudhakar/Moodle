@@ -7,7 +7,7 @@
                         "scriptLocation": {"value": "https://raw.githubusercontent.com/ummadisudhakar/Moodle/postdeployscripts/scripts/"},
                         "artifactsSasToken": {"value": ""},
                         "location": {"value": "East US"},
-                        "ctlrVmName": {"value": "controller-vm-rkk4hw"},
+                        "ctlrVmName": {"value": "controller-vm-zeeens"},
                         "commonFunctionsScriptUri": {"value": "https://raw.githubusercontent.com/ummadisudhakar/Moodle/postdeployscripts/scripts/helper_functions.sh"},
                         "moodleInstallScriptFilename": {"value": "install_moodle.sh"},
                         "moodleOnAzureConfigsJsonPath": {"value": "/var/lib/cloud/instance/moodle_on_azure_configs.json"}
