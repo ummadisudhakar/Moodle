@@ -7,7 +7,7 @@
                         "scriptLocation": {"value": "https://raw.githubusercontent.com/ummadisudhakar/Moodle/postdeployscripts/scripts/"},
                         "artifactsSasToken": {"value": ""},
                         "location": {"value": "East US"},
-                        "vmssName": {"value": "vmss-zeeens"},
+                        "vmssName": {"value": "vmss-qihu37"},
                         "commonFunctionsScriptUri": {"value": "https://raw.githubusercontent.com/ummadisudhakar/Moodle/postdeployscripts/scripts/helper_functions.sh"},
                         "webServerSetupScriptFilename": {"value": "setup_webserver.sh"},
                         "moodleOnAzureConfigsJsonPath": {"value": "/var/lib/cloud/instance/moodle_on_azure_configs.json"}
