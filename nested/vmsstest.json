@@ -27,6 +27,6 @@
         }
     ],
     "variables": {
-        "scriptUri": "[concat('https://raw.githubusercontent.com/ummadisudhakar/Moodle/postdeployscripts/scripts/','testvmss.sh'*)]"
+        "scriptUri": "[concat('https://raw.githubusercontent.com/ummadisudhakar/Moodle/postdeployscripts/scripts/','testvmss.sh')]"
     }
 }
