@@ -1,0 +1,32 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachineScaleSets/extensions",
+            "apiVersion": "2017-03-30",
+            "location": "[resourceGroup().location]",
+            "name": "[concat(vmsssripttest,'/','vmss_moodle')]",
+            
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "publisher": "Microsoft.Azure.Extensions",
+                "settings": {
+                    "fileUris": [
+                        "[variables('scriptUri')]"
+                        
+                    ]
+                },
+                "protectedSettings": {
+                    "commandToExecute": "[concat('bash ','testvmss.sh' )]"
+                },
+                "type": "CustomScript",
+                "typeHandlerVersion": "2.0"
+            }
+        }
+    ],
+    "variables": {
+        "scriptUri": "[concat('https://raw.githubusercontent.com/ummadisudhakar/Moodle/postdeployscripts/scripts/','testvmss.sh')]"
+    }
+}
