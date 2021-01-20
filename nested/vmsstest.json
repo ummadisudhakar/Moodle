@@ -6,7 +6,7 @@
         {
             "type": "Microsoft.Compute/virtualMachineScaleSets/extensions",
             "apiVersion": "2017-03-30",
-            "location": "[resourceGroup().location]",
+            "location": "West US",
             "name": "[concat('vmsssripttest','/','vmss_moodle')]",
             
             "properties": {
