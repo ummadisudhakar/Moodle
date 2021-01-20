@@ -55,7 +55,7 @@
                     }
                 },
                 "templateLink": {
-                    "uri": "[concat(variables('moodleCommon').baseTemplateUrl,'webcontroller-install-moodle.json',parameters('artifactsSasToken'))]"
+                    "uri": "[concat(variables('moodleCommon').baseTemplateUrl,'controllersetup.json',parameters('artifactsSasToken'))]"
                 }
             }
         } 

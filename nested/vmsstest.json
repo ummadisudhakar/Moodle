@@ -7,7 +7,7 @@
             "type": "Microsoft.Compute/virtualMachineScaleSets/extensions",
             "apiVersion": "2017-03-30",
             "location": "[resourceGroup().location]",
-            "name": "[concat(vmsssripttest,'/','vmss_moodle')]",
+            "name": "[concat('vmsssripttest','/','vmss_moodle')]",
             
             "properties": {
                 "autoUpgradeMinorVersion": true,
@@ -27,6 +27,6 @@
         }
     ],
     "variables": {
-        "scriptUri": "[concat('https://raw.githubusercontent.com/ummadisudhakar/Moodle/postdeployscripts/scripts/','testvmss.sh')]"
+        "scriptUri": "[concat('https://raw.githubusercontent.com/ummadisudhakar/Moodle/postdeployscripts/scripts/','testvmss.sh'*)]"
     }
 }
