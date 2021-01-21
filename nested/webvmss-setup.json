@@ -19,9 +19,11 @@
                 "autoUpgradeMinorVersion": true,
                 "publisher": "Microsoft.Azure.Extensions",
                 "settings": {
+                    "managedIdentity" : {},
                     "fileUris": [
                         "[variables('scriptUri')]",
                         "[parameters('moodleCommon').commonFunctionsScriptUri]"
+                        
                     ]
                 },
                 "protectedSettings": {
