@@ -12,9 +12,9 @@
     "resources": [
         {
             "type": "Microsoft.Compute/virtualMachineScaleSets/extensions",
-            "apiVersion": "2017-03-30",
+            "apiVersion": "2018-10-01",
             "location": "[parameters('moodleCommon').location]",
-            "name": "[concat(parameters('moodleCommon').vmssName,'/','setup_moodle')]",
+            "name": "[concat(parameters('moodleCommon').vmssName,'/','vmss_moodle')]",
             "properties": {
                 "autoUpgradeMinorVersion": true,
                 "publisher": "Microsoft.Azure.Extensions",
